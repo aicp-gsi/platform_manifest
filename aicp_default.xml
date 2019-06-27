@@ -128,6 +128,7 @@
   <project path="vendor/qcom/opensource/cryptfs_hw" name="AICP/vendor_qcom_opensource_cryptfs_hw" remote="aicp" />
   <project path="vendor/codeaurora/telephony" name="AICP/vendor_codeaurora_telephony" remote="aicp" />
   <project path="system/bt" name="aicp-gsi/system_bt" remote="aicp-gsi" />
+  <project path="external/selinux" name="aicp-gsi/external_selinux" remote="aicp-gsi" />
 
   <!-- Lineage repositories -->
   <project path="external/chromium-webview" name="android_external_chromium-webview" groups="pdk" clone-depth="1" remote="lineage" />
