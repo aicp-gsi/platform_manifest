@@ -15,6 +15,10 @@
            fetch="https://github.com/omnirom"
            review="gerrit.omnirom.org"
            revision="refs/heads/android-9.0" />
+  
+  <remote  name="aicp-gsi"
+             fetch="https://github.com/"
+             revision="refs/heads/p9.0" />
 
   <remote  name="gitlab"
            fetch="https://gitlab.com/" />
@@ -68,8 +72,8 @@
   <remove-project name="android_vendor_codeaurora_telephony" />
 
   <!-- AICP repositories -->
-  <project path="platform_manifest" name="AICP/platform_manifest" remote="aicp" />
-  <project path="build/make" name="AICP/build" remote="aicp" groups="pdk" >
+  <project path="platform_manifest" name="aicp-gsi/platform_manifest" remote="aicp-gsi" />
+  <project path="build/make" name="aicp-gsi/build" remote="aicp-gsi" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -82,28 +86,28 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="bionic" name="AICP/bionic" remote="aicp" />
+  <project path="bionic" name="aicp-gsi/bionic" remote="aicp-gsi" />
   <project path="device/aicp/sepolicy" name="AICP/device_aicp_sepolicy" remote="aicp" />
   <project path="device/qcom/sepolicy" name="AICP/device_qcom_sepolicy" remote="aicp" />
   <project path="device/qcom/sepolicy-legacy" name="AICP/device_qcom_sepolicy-legacy" remote="aicp" />
-  <project path="frameworks/av" name="AICP/frameworks_av" remote="aicp" groups="pdk" />
-  <project path="frameworks/base" name="AICP/frameworks_base" remote="aicp" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/native" name="AICP/frameworks_native" remote="aicp" groups="pdk" />
+  <project path="frameworks/av" name="aicp-gsi/frameworks_av" remote="aicp-gsi" groups="pdk" />
+  <project path="frameworks/base" name="aicp-gsi/frameworks_base" remote="aicp-gsi" groups="pdk-cw-fs,pdk-fs" />
+  <project path="frameworks/native" name="aicp-gsi/frameworks_native" remote="aicp-gsi" groups="pdk" />
   <project path="frameworks/opt/aicpgear" name="AICP/frameworks_opt_aicpgear" remote="aicp" />
   <project path="frameworks/opt/jamesdsp" name="AICP/frameworks_opt_jamesdsp" remote="aicp" />
-  <project path="frameworks/opt/net/wifi" name="AICP/frameworks_opt_net_wifi" remote="aicp" />
+  <project path="frameworks/opt/net/wifi" name="aicp-gsi/frameworks_opt_net_wifi" remote="aicp-gsi" />
   <project path="frameworks/opt/slimrecent" name="AICP/frameworks_opt_slimrecent" remote="aicp" />
-  <project path="frameworks/opt/telephony" name="AICP/frameworks_opt_telephony" remote="aicp" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="aicp-gsi/frameworks_opt_telephony" remote="aicp-gsi" groups="pdk" />
   <project path="hardware/gzosp/interfaces" name="AICP/hardware_gzosp_interfaces" remote="aicp" />
   <project path="hardware/interfaces" name="AICP/hardware_interfaces" groups="pdk" remote="aicp" />
-  <project path="packages/apps/AicpExtras" name="AICP/packages_apps_AicpExtras" remote="aicp" />
+  <project path="packages/apps/AicpExtras" name="aicp-gsi/packages_apps_AicpExtras" remote="aicp-gsi" />
   <project path="packages/apps/DeskClock" name="AICP/packages_apps_DeskClock" remote="aicp" />
   <project path="packages/apps/Dialer" name="AICP/packages_apps_Dialer" remote="aicp" />
   <project path="packages/apps/DSPManager" name="AICP/packages_apps_DSPManager" remote="aicp" />
   <project path="packages/apps/FMRadio" name="AICP/packages_apps_FMRadio" remote="aicp" />
   <project path="packages/apps/Launcher3" name="AICP/packages_apps_Launcher3" remote="aicp" />
   <project path="packages/apps/MusicFX" name="AICP/packages_apps_MusicFX" remote="aicp" />
-  <project path="packages/apps/Settings" name="AICP/packages_apps_Settings" remote="aicp" groups="pdk-fs" />
+  <project path="packages/apps/Settings" name="aicp-gsi/packages_apps_Settings" remote="aicp-gsi" groups="pdk-fs" />
   <project path="packages/apps/SmartNav" name="AICP/packages_apps_SmartNav" remote="aicp" />
   <project path="packages/apps/SnapdragonCamera" name="AICP/packages_apps_SnapdragonCamera" remote="aicp" />
   <project path="packages/apps/TilesWallpaper" name="AICP/packages_apps_TilesWallpaper" remote="aicp" />
@@ -112,17 +116,18 @@
   <project path="packages/providers/DownloadProvider" name="AICP/packages_providers_DownloadProvider" remote="aicp" />
   <project path="packages/providers/MediaProvider" name="AICP/packages_providers_MediaProvider" remote="aicp" />
   <project path="packages/services/OmniJaws" name="AICP/packages_services_OmniJaws" remote="aicp" />
-  <project path="packages/services/Telephony" name="AICP/packages_services_Telephony" remote="aicp" />
+  <project path="packages/services/Telephony" name="aicp-gsi/packages_services_Telephony" remote="aicp-gsi" />
   <project path="packages/services/Telecomm" name="AICP/packages_services_Telecomm" remote="aicp" />
   <project path="prebuilts/clang/host/linux-x86" name="AICP/prebuilts_clang_host_linux-x86" groups="pdk" remote="aicp" />
-  <project path="system/core" name="AICP/system_core" remote="aicp" groups="pdk" />
-  <project path="system/netd" name="AICP/system_netd" remote="aicp" />
-  <project path="system/sepolicy" name="AICP/system_sepolicy" remote="aicp" groups="pdk" />
+  <project path="system/core" name="aicp-gsi/system_core" remote="aicp-gsi" groups="pdk" />
+  <project path="system/netd" name="aicp-gsi/system_netd" remote="aicp-gsi" />
+  <project path="system/sepolicy" name="aicp-gsi/system_sepolicy" remote="aicp-gsi" groups="pdk" />
   <project path="system/update_engine" name="AICP/system_update_engine" remote="aicp" groups="pdk" />
-  <project path="system/vold" name="AICP/system_vold" remote="aicp" groups="pdk" />
-  <project path="vendor/aicp" name="AICP/vendor_aicp" remote="aicp" />
+  <project path="system/vold" name="aicp-gsi/system_vold" remote="aicp-gsi" groups="pdk" />
+  <project path="vendor/aicp" name="aicp-gsi/vendor_aicp" remote="aicp-gsi" />
   <project path="vendor/qcom/opensource/cryptfs_hw" name="AICP/vendor_qcom_opensource_cryptfs_hw" remote="aicp" />
   <project path="vendor/codeaurora/telephony" name="AICP/vendor_codeaurora_telephony" remote="aicp" />
+  <project path="system/bt" name="aicp-gsi/system_bt" remote="aicp-gsi" />
 
   <!-- Lineage repositories -->
   <project path="external/chromium-webview" name="android_external_chromium-webview" groups="pdk" clone-depth="1" remote="lineage" />
@@ -151,6 +156,7 @@
   <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="android_vendor_nxp_opensource_packages_apps_Nfc" remote="lineage" />
   <project path="vendor/nxp/opensource/halimpl" name="android_vendor_nxp_opensource_halimpl" remote="lineage" />
   <project path="vendor/nxp/opensource/hidlimpl" name="android_vendor_nxp_opensource_hidlimpl" remote="lineage" />
+  <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" remote="lineage" />
 
   <!-- Omni repositories -->
   <project path="packages/apps/Gallery2" name="android_packages_apps_Gallery2" remote="omni" />
